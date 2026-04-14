@@ -1,0 +1,42 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+env/
+venv/
+.venv/
+*.env
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints/
+
+# === Dữ liệu thô (không đưa lên GitHub vì dung lượng lớn) ===
+data/raw/
+
+# === Mô hình đã huấn luyện ===
+models/*.pkl
+models/*.h5
+models/*.joblib
+
+# === IDE & Editor ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logging & temp ===
+*.log
+*.tmp
+.cache/
