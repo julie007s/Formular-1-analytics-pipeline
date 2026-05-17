@@ -4,6 +4,11 @@ requests>=2.31.0
 # Data processing
 pandas>=2.0.0
 numpy>=1.26.0
+pyarrow>=15.0.0
+PyYAML>=6.0.0
+
+# F1 Data Libraries
+fastf1>=3.3.0
 
 # Machine Learning
 scikit-learn>=1.4.0
@@ -15,3 +20,8 @@ seaborn>=0.13.0
 # Jupyter Notebooks
 jupyter>=1.0.0
 ipykernel>=6.29.0
+tabulate>=0.9.0
+
+# Dashboard & Interactive Visualization
+streamlit>=1.32.0
+plotly>=5.18.0

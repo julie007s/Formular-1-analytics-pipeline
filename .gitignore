@@ -38,3 +38,9 @@ desktop.ini
 *.log
 *.tmp
 .cache/
+
+# === Data (QUAN TRỌNG) ===
+data/
+outputs/
+artifacts/
+.gemini/

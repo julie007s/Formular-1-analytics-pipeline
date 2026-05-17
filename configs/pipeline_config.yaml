@@ -1,0 +1,56 @@
+project:
+  name: F1_WinRate_Predictor
+
+execution:
+  # Cấu hình các bước Pipeline sẽ chạy. Xóa dòng để bỏ qua bước đó.
+  # Các tùy chọn: crawl, clean, base, feature
+  steps_to_run:
+    - crawl
+    - clean
+    - base
+    - feature
+
+data:
+  start_year: 2024
+  end_year: 2026
+  raw_dir: data/raw
+  interim_dir: data/interim
+  cleaned_dir: data/cleaned
+  processed_dir: data/processed
+  preview_dir: data/preview
+  metadata_dir: data/metadata
+  reports_dir: reports/data_quality
+
+api:
+  base_url: https://api.openf1.org/v1
+  sleep_seconds: 1
+  retry_wait_seconds: 6.0
+  max_retries: 5
+  timeout_seconds: 30
+
+sessions:
+  include_future_sessions: false
+  limit_sessions: 99  # Số lượng session tối đa mỗi năm (1 để test, ví dụ 99 để lấy hết)
+  types:
+    - Race
+    - Sprint
+    - Qualifying
+    - Sprint Shootout
+    - Sprint Qualifying
+
+raw_endpoints:
+  per_year:
+    - meetings
+  per_session:
+    - drivers
+    - laps
+    - weather
+    - intervals
+    - stints
+    - position
+    - race_control
+
+telemetry:
+  enabled: true
+  keep_raw: false
+  resample_interval: null   
